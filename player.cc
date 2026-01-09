@@ -20,3 +20,4 @@ std::string Player::getRoleAsString() const {
 std::string Player::getPlayerDefaults() const {
     return "Role: " + getRoleAsString() + ", Inventory: " + std::to_string(inventory_);
 }
+

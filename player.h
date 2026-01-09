@@ -1,5 +1,5 @@
-#ifndef GAME_H
-#define GAME_H
+#ifndef PLAYER_H
+#define PLAYER_H
 
 #include <string>
 #include <unordered_map>
@@ -22,7 +22,8 @@ private:
     float cost_ = 0.0;
     float total_cost_ = 0.0;
     bool is_human_ = false;
-    std::list<int> shippping_delay;
+    std::list<int> shippping_delay_ = {4,4};
+    std::list<int> order_delay_ = {4,4};
 
 public:
     Player() = default;
@@ -37,7 +38,8 @@ public:
     float getCost() const { return cost_; }
     float getTotalCost() const { return total_cost_; }
     bool isHuman() const { return is_human_; }
+    const std::list<int>& getOrderDelay() const { return order_delay_; }
     const std::list<int>& getShippingDelay() const { return shippping_delay; }
 };
 
-#endif // GAME_H
+#endif // PLAYER_H
